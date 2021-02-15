@@ -4,7 +4,6 @@ import 'file:///C:/flutter/Health/lib/AllWidget/theme/Hometheme.dart';
 import 'package:Health/AllScreen/News/NewsScreen.dart';
 import 'package:Health/AllScreen/Note/Notes.dart';
 import 'package:Health/AllScreen/QRcode/QRcode.dart';
-import 'package:Health/AllScreen/bepill/mainScreenpill.dart';
 import 'package:Health/AllScreen/chatAl/chatScreen.dart';
 import 'package:Health/AllScreen/fristaid/firstaid.dart';
 import 'package:Health/AllScreen/login/RegisterScreen.dart';
@@ -56,7 +55,7 @@ class MyApp  extends StatelessWidget{
           openApp.idScreen:(context)=> openApp(),
           Dashboard.idScreen:(context) => Dashboard(),
           behome.idScreen:(context) =>behome(),
-          pillRememberScreen1.idScreen:(context)=>pillRememberScreen1(),
+          // pillRememberScreen1.idScreen:(context)=>pillRememberScreen1(),
         },
         debugShowCheckedModeBanner: false,
         home:NotesPage(),
