@@ -50,7 +50,7 @@ class MyApp  extends StatelessWidget{
           pillRememberScreen.idScreen:(context)=>pillRememberScreen(),
           NotesPage.idScreen:(context)=>NotesPage(),
           EmergencyScreen.idScreen:(context)=>EmergencyScreen(),
-          ThemeBuilder.idScreen:(context)=>ThemeBuilder(),
+          Theme.idScreen:(context)=>Theme(),
           Googlemap.idScreen:(context)=>Googlemap(),
           NewsScreen.idScreen:(context)=>NewsScreen(),
           ChatScreen.idScreen:(context)=>ChatScreen(),

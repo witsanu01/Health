@@ -36,7 +36,7 @@ class behomeState extends State<behome>
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,ThemeBuilder.idScreen, (route) => false);
+                  context,Theme.idScreen, (route) => false);
             },
           )
         ],
