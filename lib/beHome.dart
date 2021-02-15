@@ -1,5 +1,5 @@
 
-import 'package:Health/AllScreen/Hometheme.dart';
+import 'file:///C:/flutter/Health/lib/AllWidget/theme/Hometheme.dart';
 import 'package:Health/AllScreen/MainDrawer1.dart';
 import 'package:flutter/material.dart';
 import 'package:Health/AllScreen/bepill/mainScreenpill.dart';
@@ -35,8 +35,8 @@ class behomeState extends State<behome>
               color: Colors.white,
             ),
             onPressed: () {
-              // Navigator.pushNamedAndRemoveUntil(
-              //     context,Hometheme.idScreen, (route) => false);
+              Navigator.pushNamedAndRemoveUntil(
+                  context,ThemeBuilder.idScreen, (route) => false);
             },
           )
         ],

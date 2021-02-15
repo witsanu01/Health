@@ -1,50 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:theme_demo/detail.dart';
+import 'package:theme_demo/theme_changer.dart';
 
 
-class ThemeBuilder extends StatefulWidget {
-  final Widget Function(BuildContext context, Brightness brightness) builder;
-  final Brightness defaultBrightness;
-
-  ThemeBuilder({this.builder, this.defaultBrightness});
-
-  @override
-  _ThemeBuilderState createState() => _ThemeBuilderState();
-
-  static _ThemeBuilderState of(BuildContext context)
-  {
-    return context.ancestorStateOfType(const TypeMatcher<_ThemeBuilderState>());
-  }
-}
-
-class _ThemeBuilderState extends State<ThemeBuilder> {
-  Brightness _brightness;
-
-  @override
-  void initState() {
-    super.initState();
-    _brightness = widget.defaultBrightness;
-
-    if(mounted)
-      setState(() {
-
-      });
-  }
-
-  void changeTheme() {
-    setState(() {
-      _brightness =
-      _brightness == Brightness.dark ? Brightness.light : Brightness.dark;
-    });
-  }
-
-  Brightness getCurrentTheme()
-  {
-    return _brightness;
-  }
-
+class MyApp1 extends StatelessWidget {
+  static const String idScreen = "ThemeBuilder";
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return widget.builder(context, _brightness);
+    return ThemeBuilder(
+      defaultBrightness: Brightness.dark,
+      builder: (context, _brightness) {
+        return MaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeData(primarySwatch: Colors.blue, brightness: _brightness),
+          home: MyHomePage(title: 'Flutter Theme Demo'),
+        );
+      },
+    );
   }
 }
 
@@ -101,24 +74,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-class DetailPage extends StatefulWidget {
-  @override
-  _DetailPageState createState() => _DetailPageState();
-}
-
-class _DetailPageState extends State<DetailPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Detail Page'),
-      ),
-      body: Center(
-        child: Text('Welcome to Detail Page!'),
-      ),
-    );
-  }
-}
-
-

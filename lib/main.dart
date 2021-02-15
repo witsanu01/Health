@@ -1,6 +1,6 @@
 import 'package:Health/AllScreen/Emercency/EmergencyScreeen.dart';
 import 'package:Health/AllScreen/GoogleMap/googlemap.dart';
-import 'package:Health/AllScreen/Hometheme.dart';
+import 'file:///C:/flutter/Health/lib/AllWidget/theme/Hometheme.dart';
 import 'package:Health/AllScreen/News/NewsScreen.dart';
 import 'package:Health/AllScreen/Note/Notes.dart';
 import 'package:Health/AllScreen/QRcode/QRcode.dart';
@@ -50,7 +50,7 @@ class MyApp  extends StatelessWidget{
           pillRememberScreen.idScreen:(context)=>pillRememberScreen(),
           NotesPage.idScreen:(context)=>NotesPage(),
           EmergencyScreen.idScreen:(context)=>EmergencyScreen(),
-          Hometheme.idScreen:(context)=> Hometheme(),
+          ThemeBuilder.idScreen:(context)=>ThemeBuilder(),
           Googlemap.idScreen:(context)=>Googlemap(),
           NewsScreen.idScreen:(context)=>NewsScreen(),
           ChatScreen.idScreen:(context)=>ChatScreen(),
@@ -65,15 +65,9 @@ class MyApp  extends StatelessWidget{
     );
   }
 }
-class MaterialAppWithTheme extends StatelessWidget{
-  Widget build(BuildContext context){
-    final theme = Provider.of<ThemeChanger>(context);
-    return MaterialApp(
-      home: Hometheme(),
-      theme: theme.getTheme(),
-    );
-  }
-}
+
+
+
 
 
 
