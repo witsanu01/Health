@@ -41,8 +41,8 @@ class mainScreenState extends State<mainScreen>
               color: Colors.white,
             ),
             onPressed: () {
-              Navigator.pushNamedAndRemoveUntil(
-                  context,ThemeBuilder.idScreen, (route) => false);
+              // Navigator.pushNamedAndRemoveUntil(
+              //     context,Theme.idScreen, (route) => false);
             },
           )
         ],

@@ -35,8 +35,8 @@ class behomeState extends State<behome>
               color: Colors.white,
             ),
             onPressed: () {
-              Navigator.pushNamedAndRemoveUntil(
-                  context,Theme.idScreen, (route) => false);
+              // Navigator.pushNamedAndRemoveUntil(
+              //     context,Theme.idScreen, (route) => false);
             },
           )
         ],

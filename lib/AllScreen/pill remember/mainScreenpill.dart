@@ -28,12 +28,12 @@ class _pillRememberScreenState extends State<pillRememberScreen> {
         }
       },
       child: Padding(
-        padding: const EdgeInsets.only(right: 10.0,left: 10.0),
+        padding: const EdgeInsets.only(right: 30.0,left: 30.0),
         child: MaterialApp(
           title: 'Medicine Reminder ',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            primaryColor: Color(0xff69F0AE),
+            primaryColor: Color(0xff2193f3),
             accentColor: Color(0xff69F0AE),
           ),
           home: MyMedicineRemainder(),
