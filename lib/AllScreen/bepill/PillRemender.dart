@@ -1,14 +1,14 @@
-
 import 'package:Health/beHome.dart';
 import 'package:flutter/material.dart';
 
-class PillRemender extends StatefulWidget {
+class PillRemender1 extends StatefulWidget {
   static const String idScreen = "PillRemender";
   @override
   _PillRemenderState createState() => _PillRemenderState();
 }
 
-class _PillRemenderState extends State<PillRemender> {
+class _PillRemenderState extends State<PillRemender1> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +16,7 @@ class _PillRemenderState extends State<PillRemender> {
         backgroundColor: Colors.greenAccent,
         elevation: 0.0,
         title: Text(
-          'Elderly Chat',
+          'PIll Remender',
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,

@@ -8,40 +8,18 @@ class NewsScreen extends StatefulWidget {
   _NewsScreenState createState() => _NewsScreenState();
 }
 
-class _NewsScreenState extends State<NewsScreen>
-  with SingleTickerProviderStateMixin {
-  List<Tab> tablist = [
-    Tab(child:Text("top"),),
-    Tab(child:Text("popular"),),
-    Tab(child:Text("Trending"),),
-  ];
-  TabController _tabController;
+class _NewsScreenState extends State<NewsScreen>{
+
   @override
-  void initState(){
-    super.initState();
-    _tabController= TabController(vsync: this,length: tablist.length);
-  }
-  void dispose(){
-    _tabController.dispose();
-    super.dispose();
-  }
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.greenAccent,
         elevation: 0.0,
         title: Text(
-          'News for Elderly',
-          style: TextStyle(color: Colors.white),
+          'News blog',
+          style: TextStyle(color: Colors.black),
         ),
-        bottom: PreferredSize(
-          preferredSize: Size.fromHeight(30.0),
-        child: TabBar(
-          indicatorColor: Colors.black,
-          isScrollable: true,
-          controller: _tabController,
-          tabs: tablist,
-        ),),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
@@ -51,32 +29,11 @@ class _NewsScreenState extends State<NewsScreen>
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,mainScreen.idScreen, (route) => false);
+                  context, mainScreen.idScreen, (route) => false);
             },
           )
         ],
       ),
-        body: TabBarView(
-          controller: _tabController,
-          children: [
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Container(
-                child: ListView(),
-              ),
-
-            ),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Container(),
-            ),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Container(),
-            ),
-          ],
-
-        ),
     );
   }
 }

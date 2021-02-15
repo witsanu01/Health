@@ -1,4 +1,6 @@
 import 'package:Health/AllScreen/MainDrawer1.dart';
+import 'package:Health/AllScreen/bepill/PillRemender.dart';
+import 'package:Health/AllScreen/pill%20remember/mainScreenpill.dart';
 import 'package:flutter/material.dart';
 
 
@@ -94,7 +96,7 @@ class behomeState extends State<behome>
                             color: Colors.white,
                             onPressed: () {
                                Navigator.pushNamedAndRemoveUntil(
-                                  context,pill, (route) => false);
+                                  context,PillRemender1.idScreen, (route) => false);
                             },
                             child: Text(
                               'Pill Remember',
