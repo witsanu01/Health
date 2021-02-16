@@ -118,11 +118,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {
                     print('click');
                   }),
-              SignInButton(
-                  buttonType: ButtonType.youtube,
-                  onPressed: () {
-                    print('click');
-                  }),
               FlatButton(
                 splashColor: Colors.blue.shade500,
                 onPressed: () {
