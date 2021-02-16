@@ -1,339 +1,144 @@
-import 'dart:math';
-
+import 'package:Health/AllScreen/mainScreen.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:pedometer/pedometer.dart';
 
 
-class MyApp2 extends StatefulWidget {
-  static const String idScreen = "Myapp2";
+class Body extends StatefulWidget {
+  static const String idScreen = "Body";
   @override
-  _MyAppState createState() => _MyAppState();
+  _BodyState createState() => _BodyState();
 }
 
-class _MyAppState extends State<MyApp2> {
-
-  String muestrePasos = "";
-  String _km = "Unknown";
-  String _calories = "Unknown";
-
-  String _stepCountValue = 'Unknown';
-  StreamSubscription<int> _subscription;
-
-  double _numerox; //numero pasos
-  double _convert;
-  double _kmx;
-  double burnedx;
-  double _porciento;
-
-
-  @override
-  void initState() {
-    super.initState();
-
-    setUpPedometer();
-  }
-
-  //inicia codigo pedometer
-  void setUpPedometer() {
-    Pedometer pedometer = new Pedometer();
-    _subscription = pedometer.stepCountStream.listen(_onData,
-        onError: _onError, onDone: _onDone, cancelOnError: true);
-  }
-
-  void _onData(int stepCountValue) async {
-    setState(() {
-      _stepCountValue = "$stepCountValue";
-
-    });
-
-    var dist = stepCountValue;
-    double y = (dist + .0);
-
-    setState(() {
-      _numerox =
-          y;
-    });
-
-    var long3 = (_numerox);
-    long3 = num.parse(y.toStringAsFixed(2));
-    var long4 = (long3 / 10000);
-
-    int decimals = 1;
-    int fac = pow(10, decimals);
-    double d = long4;
-    d = (d * fac).round() / fac;
-    print("d: $d");
-
-    getDistanceRun(_numerox);
-
-    setState(() {
-      _convert = d;
-      print(_convert);
-    });
-  }
-
-  void reset() {
-    setState(() {
-      int stepCountValue = 0;
-      stepCountValue = 0;
-      _stepCountValue = "$stepCountValue";
-    });
-  }
-
-  void _onDone() {}
-
-  void _onError(error) {
-    print("Flutter Pedometer Error: $error");
-  }
-
-
-  void getDistanceRun(double _numerox) {
-    var distance = ((_numerox * 78) / 100000);
-    distance = num.parse(distance.toStringAsFixed(2));
-    var distancekmx = distance * 34;
-    distancekmx = num.parse(distancekmx.toStringAsFixed(2));
-
-    setState(() {
-      _km = "$distance";
-
-    });
-    setState(() {
-      _kmx = num.parse(distancekmx.toStringAsFixed(2));
-    });
-  }
-
-
-  void getBurnedRun() {
-    setState(() {
-      var calories = _kmx;
-      _calories = "$calories";
-      //print(_calories);
-    });
-  }
-
-
+class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    //print(_stepCountValue);
-    getBurnedRun();
-    return new MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: const Text('Step Counter app'),
-          backgroundColor: Colors.black54,
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.greenAccent,
+        elevation: 0.0,
+        title: Text(
+          'Elderly percent',
+          style: TextStyle(color: Colors.black),
         ),
-        body: new ListView(
-          padding: EdgeInsets.all(5.0),
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(top: 10.0),
-              width: 250, //ancho
-              height: 250,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment
-                        .bottomCenter,
-                    end: Alignment.topCenter,
-                    colors: [Color(0xFFA9F5F2), Color(0xFF01DFD7)],
-                  ),
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(27.0),
-                    bottomRight: Radius.circular(27.0),
-                    topLeft: Radius.circular(27.0),
-                    topRight: Radius.circular(27.0),
-                  )),
-                   child: new CircularPercentIndicator(
-                  radius: 200.0,
-                  lineWidth: 13.0,
-                  animation: true,
-                  center: Container(
-                    child: new Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          height: 50,
-                          width: 50,
-                          padding: EdgeInsets.only(left: 20.0),
-                          child: Icon(
-                            FontAwesomeIcons.walking,
-                            size: 30.0,
-                            color: Colors.white,
-                          ),
-                        ),
-                        Container(
-                          //color: Colors.orange,
-                          child: Text(
-                            '$_stepCountValue',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20.0,
-                                color: Colors.purpleAccent),
-                          ),
-                          // height: 50.0,
-                          // width: 50.0,
-                        ),
-                      ],
-                    ),
-                  ),
-                  percent: 0.217,
-                  //percent: _convert,
-                  footer: new Text(
-                    "Pasos:  $_stepCountValue",
-                    style: new TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 12.0,
-                        color: Colors.purple),
-                  ),
-                  circularStrokeCap: CircularStrokeCap.round,
-                  progressColor: Colors.purpleAccent,
-                ),
+        centerTitle: true,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.fast_forward_outlined,
+              color: Colors.white,
             ),
-             Divider(
-                height: 5.0,
-              ),
-                            Container(
-                width: 80,
-                height: 100,
-                padding: EdgeInsets.only(left: 25.0, top: 10.0, bottom: 10.0),
-                color: Colors.transparent,
-                child: Row(
-                  children: <Widget>[
-                    new Container(
-                      child: new Card(
-                        child: Container(
-                          height: 80.0,
-                          width: 80.0,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("assets/images/distance.png"),
-                              fit: BoxFit.fitWidth,
-                              alignment: Alignment.topCenter,
-                            ),
-                          ),
-                          child: Text(
-                            "$_km Km",
-                            textAlign: TextAlign.right,
-                            style: new TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 14.0),
-                          ),
-                        ),
-                        color: Colors.white54,
-                      ),
-                    ),
-                    VerticalDivider(
-                      width: 20.0,
-                    ),
-                    new Container(
-                      child: new Card(
-                        child: Container(
-                          height: 80.0,
-                          width: 80.0,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("assets/images/burned.png"),
-                              fit: BoxFit.fitWidth,
-                              alignment: Alignment.topCenter,
-                            ),
-                          ),
-                        ),
-                        color: Colors.transparent,
-                      ),
-                    ),
-                    VerticalDivider(
-                      width: 20.0,
-                    ),
-                    new Container(
-                      child: new Card(
-                        child: Container(
-                          height: 80.0,
-                          width: 80.0,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("assets/images/step.png"),
-                              fit: BoxFit.fitWidth,
-                              alignment: Alignment.topCenter,
-                            ),
-                          ),
-                        ),
-                        color: Colors.transparent,
-                      ),
-                    ),
-                  ],
+            onPressed: () {
+              Navigator.pushNamedAndRemoveUntil(
+                  context,mainScreen.idScreen, (route) => false);
+            },
+          )
+        ],
+      ),
+      body: Center(
+        child: ListView(
+            children: <Widget>[
+              new CircularPercentIndicator(
+                radius: 100.0,
+                lineWidth: 10.0,
+                percent: 0.8,
+                header: new Text("Icon header"),
+                center: new Icon(
+                  Icons.person_pin,
+                  size: 50.0,
+                  color: Colors.blue,
                 ),
+                backgroundColor: Colors.grey,
+                progressColor: Colors.blue,
               ),
-              Divider(
-                height: 2,
+              new CircularPercentIndicator(
+                radius: 130.0,
+                animation: true,
+                animationDuration: 1200,
+                lineWidth: 15.0,
+                percent: 0.4,
+                center: new Text(
+                  "40 hours",
+                  style:
+                  new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                ),
+                circularStrokeCap: CircularStrokeCap.butt,
+                backgroundColor: Colors.yellow,
+                progressColor: Colors.red,
+              ),
+              new CircularPercentIndicator(
+                radius: 120.0,
+                lineWidth: 13.0,
+                animation: true,
+                percent: 0.7,
+                center: new Text(
+                  "70.0%",
+                  style:
+                  new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                ),
+                footer: new Text(
+                  "Sales this week",
+                  style:
+                  new TextStyle(fontWeight: FontWeight.bold, fontSize: 17.0),
+                ),
+                circularStrokeCap: CircularStrokeCap.round,
+                progressColor: Colors.purple,
+              ),
+              Padding(
+                padding: EdgeInsets.all(15.0),
+                child: new CircularPercentIndicator(
+                  radius: 60.0,
+                  lineWidth: 5.0,
+                  percent: 1.0,
+                  center: new Text("100%"),
+                  progressColor: Colors.green,
+                ),
               ),
               Container(
-                padding: EdgeInsets.only(top: 2.0),
-                width: 150, //ancho
-                height: 30, //largo tambien por numero height: 300
-                color: Colors.transparent,
-                child: Row(
+                padding: EdgeInsets.all(15.0),
+                child: new Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    new Container(
-                      padding: EdgeInsets.only(left: 40.0),
-                      child: new Card(
-                        child: Container(
-                          child: Text(
-                            "$_km Km",
-                            textAlign: TextAlign.right,
-                            style: new TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14.0,
-                                color: Colors.white),
-                          ),
-                        ),
-                        color: Colors.purple,
-                      ),
+                    new CircularPercentIndicator(
+                      radius: 45.0,
+                      lineWidth: 4.0,
+                      percent: 0.10,
+                      center: new Text("10%"),
+                      progressColor: Colors.red,
                     ),
-                    VerticalDivider(
-                      width: 20.0,
+                    new Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10.0),
                     ),
-                    new Container(
-                      padding: EdgeInsets.only(left: 10.0),
-                      child: new Card(
-                        child: Container(
-                          child: Text(
-                            "$_calories kCal",
-                            textAlign: TextAlign.right,
-                            style: new TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14.0,
-                                color: Colors.white),
-                          ),
-                        ),
-                        color: Colors.red,
-                      ),
+                    new CircularPercentIndicator(
+                      radius: 45.0,
+                      lineWidth: 4.0,
+                      percent: 0.30,
+                      center: new Text("30%"),
+                      progressColor: Colors.orange,
                     ),
-                    VerticalDivider(
-                      width: 5.0,
+                    new Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10.0),
                     ),
-                    new Container(
-                      padding: EdgeInsets.only(left: 10.0),
-                      child: new Card(
-                        child: Container(
-                          child: Text(
-                            "$_stepCountValue Steps",
-                            textAlign: TextAlign.right,
-                            style: new TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14.0,
-                                color: Colors.white),
-                          ),
-                        ),
-                        color: Colors.black,
-                      ),
+                    new CircularPercentIndicator(
+                      radius: 45.0,
+                      lineWidth: 4.0,
+                      percent: 0.60,
+                      center: new Text("60%"),
+                      progressColor: Colors.yellow,
                     ),
+                    new Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10.0),
+                    ),
+                    new CircularPercentIndicator(
+                      radius: 45.0,
+                      lineWidth: 4.0,
+                      percent: 0.90,
+                      center: new Text("90%"),
+                      progressColor: Colors.green,
+                    )
                   ],
                 ),
-              ),
-          ],
-        ),
+              )
+            ]),
       ),
     );
   }
