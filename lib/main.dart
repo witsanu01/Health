@@ -4,7 +4,6 @@ import 'package:Health/AllScreen/News/NewsScreen.dart';
 import 'package:Health/AllScreen/Note/Notes.dart';
 import 'package:Health/AllScreen/QRcode/QRcode.dart';
 import 'package:Health/AllScreen/bepill/PillRemender.dart';
-import 'package:Health/AllScreen/body/main.dart';
 import 'package:Health/AllScreen/chatAl/chatScreen.dart';
 import 'package:Health/AllScreen/fristaid/firstaid.dart';
 import 'package:Health/AllScreen/login/RegisterScreen.dart';
@@ -39,7 +38,7 @@ class MyApp  extends StatelessWidget{
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        initialRoute:Body.idScreen,
+        initialRoute:openApp.idScreen,
         routes: {
           mainScreen.idScreen:(context)=>mainScreen(),
           LoginScreen.idScreen:(context)=>LoginScreen(),
