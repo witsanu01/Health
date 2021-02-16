@@ -1,10 +1,10 @@
 import 'package:Health/AllScreen/Emercency/EmergencyScreeen.dart';
 import 'package:Health/AllScreen/GoogleMap/googlemap.dart';
-import 'file:///C:/flutter/Health/lib/AllWidget/theme/Hometheme.dart';
 import 'package:Health/AllScreen/News/NewsScreen.dart';
 import 'package:Health/AllScreen/Note/Notes.dart';
 import 'package:Health/AllScreen/QRcode/QRcode.dart';
 import 'package:Health/AllScreen/bepill/PillRemender.dart';
+import 'package:Health/AllScreen/body/main.dart';
 import 'package:Health/AllScreen/chatAl/chatScreen.dart';
 import 'package:Health/AllScreen/fristaid/firstaid.dart';
 import 'package:Health/AllScreen/login/RegisterScreen.dart';
@@ -39,7 +39,7 @@ class MyApp  extends StatelessWidget{
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        initialRoute:openApp.idScreen,
+        initialRoute:MyApp2.idScreen,
         routes: {
           mainScreen.idScreen:(context)=>mainScreen(),
           LoginScreen.idScreen:(context)=>LoginScreen(),
