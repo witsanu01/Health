@@ -54,7 +54,7 @@ class _InfoScreenState extends State<InfoScreen> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,behome.idScreen, (route) => false);
+                  context,mainScreen.idScreen, (route) => false);
             },
           )
         ],

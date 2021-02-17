@@ -7,9 +7,9 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class foodScreen extends StatefulWidget {
   static const String idScreen ="foodScreen";
-  final _firebaseMessaging = FirebaseMessaging();
-  final _message = 'Genarating Message..';
-  final _token = 'Generating';
+  // final _firebaseMessaging = FirebaseMessaging();
+  // final _message = 'Genarating Message..';
+  // final _token = 'Generating';
   //
   // void initstate(){
   //   _firebaseMessaging.configure(

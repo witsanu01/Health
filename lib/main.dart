@@ -5,6 +5,7 @@ import 'package:Health/AllScreen/Note/Notes.dart';
 import 'package:Health/AllScreen/QRcode/QRcode.dart';
 import 'package:Health/AllScreen/bepill/PillRemender.dart';
 import 'package:Health/AllScreen/chatAl/chatScreen.dart';
+import 'package:Health/AllScreen/foods/foodhealthy.dart';
 import 'package:Health/AllScreen/fristaid/firstaid.dart';
 import 'package:Health/AllScreen/login/RegisterScreen.dart';
 import 'package:Health/AllScreen/login/auth.dart';
@@ -60,6 +61,7 @@ class MyApp  extends StatelessWidget{
           PillRemender1.idScreen:(context)=> PillRemender1(),
           foodScreen.idScreen:(context)=>foodScreen(),
           NewfoodScreen.idScreen:(context)=>NewfoodScreen(),
+          foods.idScreen:(context)=>foods(),
 
 
         },

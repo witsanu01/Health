@@ -6,11 +6,11 @@ import 'package:Health/AllScreen/News/NewsScreen.dart';
 import 'package:Health/AllScreen/Note/Notes.dart';
 import 'package:Health/AllScreen/QRcode/QRcode.dart';
 import 'package:Health/AllScreen/chatAl/chatScreen.dart';
+import 'package:Health/AllScreen/foods/foodhealthy.dart';
 import 'package:Health/AllScreen/fristaid/firstaid.dart';
 import 'package:Health/AllScreen/pill%20remember/mainScreenpill.dart';
 import 'package:Health/foodScreen/Newsfood.dart';
 import 'package:flutter/material.dart';
-
 
 class mainScreen extends StatefulWidget {
   static const String idScreen = "mainScreen";
@@ -21,11 +21,9 @@ class mainScreen extends StatefulWidget {
 
 class mainScreenState extends State<mainScreen>
     with SingleTickerProviderStateMixin {
-
   int selectedItemIndex = 4;
 
   @override
-
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -64,19 +62,19 @@ class mainScreenState extends State<mainScreen>
                           borderRadius: BorderRadius.circular(30),
                           color: Colors.grey[200]),
                       child: TextField(
-                        onTap: (){
-
-                        },
+                        onTap: () {},
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
-                            borderSide: BorderSide(
-                                color: Colors.grey.withOpacity(0.4)
-                            ),
+                            borderSide:
+                                BorderSide(color: Colors.grey.withOpacity(0.4)),
                           ),
-                          contentPadding: EdgeInsets.only(top:10,left: 10.0),
+                          contentPadding: EdgeInsets.only(top: 10, left: 10.0),
                           hintText: 'search...',
-                          suffixIcon: Icon(Icons.search,color: Colors.grey.withOpacity(0.4),),
+                          suffixIcon: Icon(
+                            Icons.search,
+                            color: Colors.grey.withOpacity(0.4),
+                          ),
                         ),
                       ),
                     ),
@@ -106,8 +104,8 @@ class mainScreenState extends State<mainScreen>
                           child: RaisedButton(
                             color: Colors.white,
                             onPressed: () {
-                              Navigator.pushNamedAndRemoveUntil(
-                                  context,Googlemap.idScreen, (route) => false);
+                              Navigator.pushNamedAndRemoveUntil(context,
+                                  Googlemap.idScreen, (route) => false);
                             },
                             child: Text(
                               'Google Map',
@@ -155,7 +153,7 @@ class mainScreenState extends State<mainScreen>
                             color: Colors.white,
                             onPressed: () {
                               Navigator.pushNamedAndRemoveUntil(
-                                  context,firstaid.idScreen, (route) => false);
+                                  context, firstaid.idScreen, (route) => false);
                             },
                             child: Text(
                               'First aid',
@@ -178,8 +176,8 @@ class mainScreenState extends State<mainScreen>
                           child: RaisedButton(
                             color: Colors.white,
                             onPressed: () {
-                              Navigator.pushNamedAndRemoveUntil(
-                                  context,NewsScreen.idScreen, (route) => false);
+                              Navigator.pushNamedAndRemoveUntil(context,
+                                  NewsScreen.idScreen, (route) => false);
                             },
                             child: Text(
                               'News ',
@@ -202,11 +200,35 @@ class mainScreenState extends State<mainScreen>
                           child: RaisedButton(
                             color: Colors.white,
                             onPressed: () {
-                              Navigator.pushNamedAndRemoveUntil(
-                                  context,NewfoodScreen.idScreen, (route) => false);
+                              Navigator.pushNamedAndRemoveUntil(context,
+                                  NewfoodScreen.idScreen, (route) => false);
                             },
                             child: Text(
                               'cal foods',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 14.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Card(
+                    elevation: 4,
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset("assets/eat.png", width: 100),
+                        Container(
+                          child: RaisedButton(
+                            color: Colors.white,
+                            onPressed: () {
+                              Navigator.pushNamedAndRemoveUntil(context,
+                                 foods.idScreen, (route) => false);
+                            },
+                            child: Text(
+                              'foods Healthy',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 14.0,
@@ -226,8 +248,8 @@ class mainScreenState extends State<mainScreen>
                           child: RaisedButton(
                             color: Colors.white,
                             onPressed: () {
-                              Navigator.pushNamedAndRemoveUntil(
-                                  context,ChatScreen.idScreen, (route) => false);
+                              Navigator.pushNamedAndRemoveUntil(context,
+                                  ChatScreen.idScreen, (route) => false);
                             },
                             child: Text(
                               'Chat',
@@ -251,7 +273,7 @@ class mainScreenState extends State<mainScreen>
                             color: Colors.white,
                             onPressed: () {
                               Navigator.pushNamedAndRemoveUntil(
-                                  context,QRcode.idScreen, (route) => false);
+                                  context, QRcode.idScreen, (route) => false);
                             },
                             child: Text(
                               'QR Code',
@@ -274,8 +296,8 @@ class mainScreenState extends State<mainScreen>
                           child: RaisedButton(
                             color: Colors.white,
                             onPressed: () {
-                              Navigator.pushNamedAndRemoveUntil(
-                                  context,EmergencyScreen.idScreen, (route) => false);
+                              Navigator.pushNamedAndRemoveUntil(context,
+                                  EmergencyScreen.idScreen, (route) => false);
                             },
                             child: Text(
                               'Emercency',
@@ -298,8 +320,8 @@ class mainScreenState extends State<mainScreen>
                           child: RaisedButton(
                             color: Colors.white,
                             onPressed: () {
-                              Navigator.pushNamedAndRemoveUntil(
-                                  context,NotesPage.idScreen, (route) => false);
+                              Navigator.pushNamedAndRemoveUntil(context,
+                                  NotesPage.idScreen, (route) => false);
                             },
                             child: Text(
                               'Note Activity',
@@ -313,7 +335,6 @@ class mainScreenState extends State<mainScreen>
                       ],
                     ),
                   ),
-
                 ],
               ),
             ),
