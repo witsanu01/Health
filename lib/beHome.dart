@@ -1,6 +1,8 @@
 import 'package:Health/AllScreen/MainDrawer1.dart';
 import 'package:Health/AllScreen/bepill/PillRemender.dart';
 import 'package:Health/AllScreen/pill%20remember/mainScreenpill.dart';
+import 'package:Health/foodScreen/Newsfood.dart';
+import 'package:Health/foodScreen/foodScreen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -110,7 +112,6 @@ class behomeState extends State<behome>
                       ],
                     ),
                   ),
-
                 ],
               ),
             ),

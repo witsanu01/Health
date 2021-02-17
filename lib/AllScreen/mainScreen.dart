@@ -8,6 +8,7 @@ import 'package:Health/AllScreen/QRcode/QRcode.dart';
 import 'package:Health/AllScreen/chatAl/chatScreen.dart';
 import 'package:Health/AllScreen/fristaid/firstaid.dart';
 import 'package:Health/AllScreen/pill%20remember/mainScreenpill.dart';
+import 'package:Health/foodScreen/Newsfood.dart';
 import 'package:flutter/material.dart';
 
 
@@ -129,8 +130,8 @@ class mainScreenState extends State<mainScreen>
                           child: RaisedButton(
                             color: Colors.white,
                             onPressed: () {
-                              Navigator.pushNamedAndRemoveUntil(
-                                  context,pillRememberScreen.idScreen, (route) => false);
+                              // Navigator.pushNamedAndRemoveUntil(
+                              //     context,pillRememberScreen.idScreen, (route) => false);
                             },
                             child: Text(
                               'Pill Remember',
@@ -182,6 +183,30 @@ class mainScreenState extends State<mainScreen>
                             },
                             child: Text(
                               'News ',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 14.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Card(
+                    elevation: 4,
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset("assets/healthy-food.png", width: 100),
+                        Container(
+                          child: RaisedButton(
+                            color: Colors.white,
+                            onPressed: () {
+                              Navigator.pushNamedAndRemoveUntil(
+                                  context,NewfoodScreen.idScreen, (route) => false);
+                            },
+                            child: Text(
+                              'cal foods',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 14.0,

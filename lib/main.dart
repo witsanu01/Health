@@ -14,6 +14,8 @@ import 'package:Health/AllScreen/pill%20remember/mainScreenpill.dart';
 import 'package:Health/AllScreen/speechScreen.dart';
 import 'package:Health/AllScreen/theme.dart';
 import 'package:Health/beHome.dart';
+import 'package:Health/foodScreen/Newsfood.dart';
+import 'package:Health/foodScreen/foodScreen.dart';
 import 'package:Health/openApp.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -56,6 +58,9 @@ class MyApp  extends StatelessWidget{
           Dashboard.idScreen:(context) => Dashboard(),
           behome.idScreen:(context) =>behome(),
           PillRemender1.idScreen:(context)=> PillRemender1(),
+          foodScreen.idScreen:(context)=>foodScreen(),
+          NewfoodScreen.idScreen:(context)=>NewfoodScreen(),
+
 
         },
         debugShowCheckedModeBanner: false,
