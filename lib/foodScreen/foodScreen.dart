@@ -1,5 +1,5 @@
 import 'package:Health/AllScreen/mainScreen.dart';
-import 'package:Health/beHome.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -7,6 +7,18 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class foodScreen extends StatefulWidget {
   static const String idScreen ="foodScreen";
+  final _firebaseMessaging = FirebaseMessaging();
+  final _message = 'Genarating Message..';
+  final _token = 'Generating';
+
+  void initstate(){
+    _firebaseMessaging.configure(
+        onMessage:(Map<string,dynamic>_message) async{
+          set
+        }
+    );
+  }
+
   @override
   _foodScreenState createState() => _foodScreenState();
 }
@@ -155,7 +167,7 @@ class _foodScreenState extends State<foodScreen> {
                 color: Colors.greenAccent,
                 onPressed: () {},
                 child: Text(
-                  'foods'.toUpperCase(),
+                  'send foods'.toUpperCase(),
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 14.0,
