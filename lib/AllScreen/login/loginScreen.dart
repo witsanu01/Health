@@ -1,9 +1,11 @@
+import 'package:Health/AllScreen/login/GoogleSignIn.dart';
 import 'package:Health/AllScreen/login/RegisterScreen.dart';
 import 'package:Health/AllScreen/mainScreen.dart';
 import 'package:Health/AllWidget/processDialog.dart';
 import 'package:Health/main.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:sign_button/sign_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -111,7 +113,9 @@ class _LoginScreenState extends State<LoginScreen> {
               SignInButton(
                   buttonType: ButtonType.google,
                   onPressed: () {
-                    print('click');
+                  final provider =
+                  Provider.of<GoogleSignInProvider>(context, listen: false);
+                  provider.login();
                   }),
               SignInButton(
                   buttonType: ButtonType.facebook,
