@@ -10,14 +10,16 @@ class foodScreen extends StatefulWidget {
   final _firebaseMessaging = FirebaseMessaging();
   final _message = 'Genarating Message..';
   final _token = 'Generating';
-
-  void initstate(){
-    _firebaseMessaging.configure(
-        onMessage:(Map<string,dynamic>_message) async{
-          set
-        }
-    );
-  }
+  //
+  // void initstate(){
+  //   _firebaseMessaging.configure(
+  //       onMessage:(Map<string,dynamic>_message) async{
+  //         setstate(){
+  //
+  //         }
+  //       }
+  //   );
+  // }
 
   @override
   _foodScreenState createState() => _foodScreenState();
