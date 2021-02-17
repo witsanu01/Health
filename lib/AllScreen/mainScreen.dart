@@ -296,6 +296,7 @@ class mainScreenState extends State<mainScreen>
                           child: RaisedButton(
                             color: Colors.white,
                             onPressed: () {
+
                               Navigator.pushNamedAndRemoveUntil(context,
                                   EmergencyScreen.idScreen, (route) => false);
                             },
