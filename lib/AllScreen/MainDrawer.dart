@@ -120,6 +120,19 @@ class MainDrawer extends StatelessWidget {
             "logout",
           ),
         ),
+        ListTile(
+          onTap: () {
+            Navigator.pushNamedAndRemoveUntil(
+                context,mainScreen.idScreen, (route) => false);
+          },
+          leading: Icon(
+            Icons.logout,
+            color: Colors.black,
+          ),
+          title: Text(
+            "Home",
+          ),
+        ),
       ],
     );
   }

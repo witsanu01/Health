@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 
 class ForYouContainer extends StatefulWidget {
-  final Article article;
+  final Article
+  article;
 
   const ForYouContainer({Key key, this.article}) : super(key: key);
   @override

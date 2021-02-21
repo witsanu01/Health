@@ -1,6 +1,4 @@
-import 'package:Health/AllScreen/login/RegisterScreen.dart';
-import 'package:Health/AllScreen/login/loginScreen.dart';
-import 'package:Health/AllScreen/mainScreen.dart';
+
 import 'package:Health/AllScreen/speechScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';

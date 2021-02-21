@@ -1,6 +1,5 @@
 import 'package:Health/AllScreen/Emercency/EmergencyScreeen.dart';
 import 'package:Health/AllScreen/GoogleMap/googlemap.dart';
-import 'package:Health/AllScreen/News/NewsScreen.dart';
 import 'package:Health/AllScreen/Note/Notes.dart';
 import 'package:Health/AllScreen/QRcode/QRcode.dart';
 import 'package:Health/AllScreen/bepill/PillRemender.dart';
@@ -34,7 +33,6 @@ class MyApp  extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<ThemeChanger>(
-      builder: (_)=>ThemeChanger(ThemeData.dark()),
       child: new MaterialApp(
         title: 'Elderly Health',
         theme: ThemeData(
@@ -53,7 +51,6 @@ class MyApp  extends StatelessWidget{
           NotesPage.idScreen:(context)=>NotesPage(),
           EmergencyScreen.idScreen:(context)=>EmergencyScreen(),
           Googlemap.idScreen:(context)=>Googlemap(),
-          NewsScreen.idScreen:(context)=>NewsScreen(),
           ChatScreen.idScreen:(context)=>ChatScreen(),
           openApp.idScreen:(context)=> openApp(),
           Dashboard.idScreen:(context) => Dashboard(),
@@ -62,6 +59,7 @@ class MyApp  extends StatelessWidget{
           foodScreen.idScreen:(context)=>foodScreen(),
           NewfoodScreen.idScreen:(context)=>NewfoodScreen(),
           foods.idScreen:(context)=>foods(),
+          // MyApp1.idScreen:(context)=>MyApp(),
 
 
         },

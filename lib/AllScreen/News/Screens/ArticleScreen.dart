@@ -1,7 +1,6 @@
 import 'package:Health/AllScreen/News/Data/data.dart';
 import 'package:flutter/material.dart';
 
-
 class ArticleScreen extends StatefulWidget {
   final Article article;
 
