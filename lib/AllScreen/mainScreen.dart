@@ -1,11 +1,13 @@
 import 'package:Health/AllScreen/Emercency/EmergencyScreeen.dart';
 import 'package:Health/AllScreen/GoogleMap/googlemap.dart';
 import 'package:Health/AllScreen/MainDrawer.dart';
+import 'package:Health/AllScreen/News/Screens/HomeScreen.dart';
 import 'package:Health/AllScreen/Note/Notes.dart';
 import 'package:Health/AllScreen/QRcode/QRcode.dart';
 import 'package:Health/AllScreen/chatAl/chatScreen.dart';
 import 'package:Health/AllScreen/foods/foodhealthy.dart';
 import 'package:Health/AllScreen/fristaid/firstaid.dart';
+import 'package:Health/AllScreen/pill%20remember/mainScreenpill.dart';
 import 'package:Health/foodScreen/Newsfood.dart';
 import 'package:flutter/material.dart';
 
@@ -125,8 +127,8 @@ class mainScreenState extends State<mainScreen>
                           child: RaisedButton(
                             color: Colors.white,
                             onPressed: () {
-                              // Navigator.pushNamedAndRemoveUntil(
-                              //     context,pillRememberScreen.idScreen, (route) => false);
+                              Navigator.pushNamedAndRemoveUntil(
+                                  context,pillRememberScreen.idScreen, (route) => false);
                             },
                             child: Text(
                               'Pill Remember',
@@ -173,8 +175,8 @@ class mainScreenState extends State<mainScreen>
                           child: RaisedButton(
                             color: Colors.white,
                             onPressed: () {
-                              // Navigator.pushNamedAndRemoveUntil(context,
-                              //  MyApp1.idScreen, (route) => false);
+                              Navigator.pushNamedAndRemoveUntil(context,
+                               HomeScreen.idScreen, (route) => false);
                             },
                             child: Text(
                               'News ',

@@ -1,5 +1,6 @@
 import 'package:Health/AllScreen/Emercency/EmergencyScreeen.dart';
 import 'package:Health/AllScreen/GoogleMap/googlemap.dart';
+import 'package:Health/AllScreen/News/Screens/HomeScreen.dart';
 import 'package:Health/AllScreen/Note/Notes.dart';
 import 'package:Health/AllScreen/QRcode/QRcode.dart';
 import 'package:Health/AllScreen/bepill/PillRemender.dart';
@@ -59,7 +60,7 @@ class MyApp  extends StatelessWidget{
           foodScreen.idScreen:(context)=>foodScreen(),
           NewfoodScreen.idScreen:(context)=>NewfoodScreen(),
           foods.idScreen:(context)=>foods(),
-          // MyApp1.idScreen:(context)=>MyApp(),
+          HomeScreen.idScreen:(context)=>HomeScreen(),
 
 
         },

@@ -1,10 +1,12 @@
 import 'package:Health/AllScreen/News/Data/data.dart';
 import 'package:Health/AllScreen/News/Widgets/ForYouContainer.dart';
 import 'package:Health/AllScreen/News/Widgets/TrendingContainer.dart';
+import 'package:Health/AllScreen/mainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:md2_tab_indicator/md2_tab_indicator.dart';
 
 class HomeScreen extends StatefulWidget {
+  static const String idScreen = "HomeScreen";
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -27,6 +29,27 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xfff4f6f9),
+      appBar: AppBar(
+        backgroundColor: Colors.greenAccent,
+        elevation: 0.0,
+        title: Text(
+          'News Elderly',
+          style: TextStyle(color: Colors.black),
+        ),
+        centerTitle: true,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.fast_forward_outlined,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pushNamedAndRemoveUntil(
+                  context,mainScreen.idScreen, (route) => false);
+            },
+          )
+        ],
+      ),
       body: ListView(
         children: [
           SizedBox(
