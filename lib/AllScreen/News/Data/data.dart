@@ -40,8 +40,8 @@ final List<Article> trendingNews = [
     authorImg: 'assets/spotify.png',
   ),
   Article(
-    category: 'Sports',
-    title: 'Jadon Sancho Transfer News',
+    category: 'เทคโนโลยี',
+    title: 'คว้าโอกาสจากเทคโนโลยีเพื่อสุขภาพสำหรับผู้สูงอายุ',
     description:
         'Jadon Sancho transfer rumors are growing as we move towards the winter break. Despite Borussia Dortmund’s fans’ feelings, big European clubs like Paris Saint-Germain, Real Madrid, Liverpool, and Manchester United are all interested in the services of the 19 years old English international.According to Marca.com, Real Madrid and Liverpool joined the race to sign the talented Borussia Dortmund player in the summer. Manchester United’s interest in the young forward is a little bit older.',
     time: '3hr ago',
