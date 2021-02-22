@@ -20,20 +20,20 @@ class Article {
 
 final List<Article> trendingNews = [
   Article(
-    category: 'politics',
-    title: 'It has to stop',
+    category: 'Elderly News',
+    title: 'อยากสูงวัยอย่างมีคุณภาพ ต้องเตรียมพร้อม 4 ด้านก่อนเกษียณ',
     description:
-        'Donald Trump has verbally attacked Michigan\'s governor Gretchen Whitmer, despite warnings about the effect his words can have.During a rally in the state, Mr Trump called on Ms Whitmer, a Democrat, to axe the remaining restrictions aimed at limiting the spread of the coronavirus.',
+        'ประเทศไทยกำลังเข้าสู่สังคมสูงวัยคือ จะมีประชากรกลุ่มคนสูงวัยมากกว่าวัยอื่น นั่นแปลว่าผู้สูงวัยบางคนอาจจะไม่มีลูกหลานหรือญาติมิตรให้พึ่งพิงเลยก็เป็นได้ ดังนั้น คนที่กำลังย่างเข้าสู่วัยที่เรียกว่า “สูงวัย” ซึ่งปัจจุบันคือ กลุ่มคนวัยทำงานที่ใกล้เกษียณจึงควรเตรียมความพร้อมให้ดี ๆ เพื่อจะได้ใช้ชีวิตสูงวัยอย่างมีคุณภาพ',
     time: '1hr ago',
     author: 'Sky News',
     image: 'assets/trump.jpg',
     authorImg: 'assets/skyNews.png',
   ),
   Article(
-    category: 'Entertainment',
+    category: 'Business News',
     title: 'JRE on Spotify',
     description:
-        'Joe Rogan—America’s most popular podcaster—has officially debuted on Spotify. The longtime comedian and mixed martial arts announcer made “The Joe Rogan Experience” available to Spotify subscribers on Tuesday.',
+        'ปัจจุบันประชากรผู้สูงอายุในประเทศไทยมีจำนวนกว่า 12 ล้านคน โดยไทยจะเป็นสังคมผู้สูงอายุโดยสมบูรณ์ในปี 2567 และกลายเป็นสังคมผู้สูงอายุระดับสุดยอดในปี 2575 ซึ่งมีสัดส่วนจำนวนผู้สูงอายุที่มีอายุ 65 ปีขึ้นไป อยู่ที่ 14% และ 20% ของจำนวนประชากรทั้งหมดตามลำดับ ทำให้ธุรกิจเพื่อผู้สูงอายุเป็นกลุ่มธุรกิจที่มีศักยภาพ และมีโอกาสในการขยายตลาดเพื่อรองรับสังคมผู้สูงอายุในอนาคตอันใกล้',
     time: '2hr ago',
     author: 'Spotify',
     image: 'assets/joeRogan.jpg',

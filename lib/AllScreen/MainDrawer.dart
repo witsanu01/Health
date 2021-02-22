@@ -34,19 +34,6 @@ class MainDrawer extends StatelessWidget {
         ),
         ListTile(
           onTap: () {
-            Navigator.pushNamedAndRemoveUntil(
-                context,speechScreen.idScreen, (route) => false);
-          },
-          leading: Icon(
-            Icons.keyboard_voice_rounded,
-            color: Colors.black,
-          ),
-          title: Text(
-            "speech voice",
-          ),
-        ),
-        ListTile(
-          onTap: () {
             customlaunch("tel:1669");
           },
           leading: Icon(

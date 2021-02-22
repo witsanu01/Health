@@ -4,6 +4,7 @@ import 'package:Health/AllScreen/MainDrawer.dart';
 import 'package:Health/AllScreen/News/Screens/HomeScreen.dart';
 import 'package:Health/AllScreen/Note/Notes.dart';
 import 'package:Health/AllScreen/QRcode/QRcode.dart';
+import 'package:Health/AllScreen/bepill/PillRemender.dart';
 import 'package:Health/AllScreen/chatAl/chatScreen.dart';
 import 'package:Health/AllScreen/foods/foodhealthy.dart';
 import 'package:Health/AllScreen/fristaid/firstaid.dart';
@@ -128,7 +129,7 @@ class mainScreenState extends State<mainScreen>
                             color: Colors.white,
                             onPressed: () {
                               Navigator.pushNamedAndRemoveUntil(
-                                  context,pillRememberScreen.idScreen, (route) => false);
+                                  context,PillRemender1.idScreen, (route) => false);
                             },
                             child: Text(
                               'Pill Remember',

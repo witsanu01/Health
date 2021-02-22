@@ -1,3 +1,4 @@
+import 'package:Health/AllScreen/mainScreen.dart';
 import 'package:Health/beHome.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +29,7 @@ class _PillRemenderState extends State<PillRemender1> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,behome.idScreen, (route) => false);
+                  context,mainScreen.idScreen, (route) => false);
             },
           )
         ],
