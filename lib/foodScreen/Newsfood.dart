@@ -1,4 +1,3 @@
-
 import 'package:Health/foodScreen/foodScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +27,10 @@ class _NewsfoodsState extends State<NewfoodScreen> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,foodScreen.idScreen, (route) => false);
+                context,
+                FoodScreen.idScreen,
+                (route) => false,
+              );
             },
           )
         ],
@@ -124,8 +126,7 @@ class _NewsfoodsState extends State<NewfoodScreen> {
                       child: RaisedButton(
                         color: Colors.greenAccent,
                         onPressed: () {
-                          Navigator.pushNamedAndRemoveUntil(
-                              context,foodScreen.idScreen, (route) => false);
+                          Navigator.pushNamedAndRemoveUntil(context, FoodScreen.idScreen, (route) => false);
                         },
                         child: Text(
                           'คำนวณ'.toUpperCase(),

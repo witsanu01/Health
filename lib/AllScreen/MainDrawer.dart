@@ -1,12 +1,10 @@
 import 'package:Health/AllScreen/login/RegisterScreen.dart';
 import 'package:Health/AllScreen/login/loginScreen.dart';
 import 'package:Health/AllScreen/mainScreen.dart';
-import 'package:Health/AllScreen/speechScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MainDrawer extends StatelessWidget {
-
   void customlaunch(command) async {
     if (await canLaunch(command)) {
       await launch(command);
@@ -23,9 +21,7 @@ class MainDrawer extends StatelessWidget {
           height: 20.0,
         ),
         ListTile(
-          onTap: () {
-
-          },
+          onTap: () {},
           leading: Icon(
             Icons.person,
             color: Colors.black,
@@ -58,7 +54,8 @@ class MainDrawer extends StatelessWidget {
         ),
         ListTile(
           onTap: () {
-            customlaunch("http://www.hosting1.cmru.ac.th/61143231/?fbclid=IwAR1OEgQrhhaNyLTiEzvQTy9C2enAPRayRCsnz9e5DxnlA5TtA84XcA1p5S4");
+            customlaunch(
+                "http://www.hosting1.cmru.ac.th/61143231/?fbclid=IwAR1OEgQrhhaNyLTiEzvQTy9C2enAPRayRCsnz9e5DxnlA5TtA84XcA1p5S4");
           },
           leading: Icon(
             Icons.contact_support,
@@ -70,8 +67,7 @@ class MainDrawer extends StatelessWidget {
         ),
         ListTile(
           onTap: () {
-            Navigator.pushNamedAndRemoveUntil(
-                context, LoginScreen.idScreen, (route) => false);
+            Navigator.pushNamedAndRemoveUntil(context, LoginScreen.idScreen, (route) => false);
           },
           leading: Icon(
             Icons.login,
@@ -83,8 +79,7 @@ class MainDrawer extends StatelessWidget {
         ),
         ListTile(
           onTap: () {
-            Navigator.pushNamedAndRemoveUntil(
-                context,RegisterScreen.idScreen, (route) => false);
+            Navigator.pushNamedAndRemoveUntil(context, RegisterScreen.idScreen, (route) => false);
           },
           leading: Icon(
             Icons.add_circle_outlined,
@@ -96,8 +91,7 @@ class MainDrawer extends StatelessWidget {
         ),
         ListTile(
           onTap: () {
-            Navigator.pushNamedAndRemoveUntil(
-                context,LoginScreen.idScreen, (route) => false);
+            Navigator.pushNamedAndRemoveUntil(context, LoginScreen.idScreen, (route) => false);
           },
           leading: Icon(
             Icons.logout,
@@ -109,8 +103,7 @@ class MainDrawer extends StatelessWidget {
         ),
         ListTile(
           onTap: () {
-            Navigator.pushNamedAndRemoveUntil(
-                context,mainScreen.idScreen, (route) => false);
+            Navigator.pushNamedAndRemoveUntil(context, mainScreen.idScreen, (route) => false);
           },
           leading: Icon(
             Icons.logout,

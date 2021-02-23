@@ -2,21 +2,17 @@ import 'package:Health/AllScreen/MainDrawer1.dart';
 import 'package:Health/AllScreen/pill%20remember/mainScreenpill.dart';
 import 'package:flutter/material.dart';
 
-
-class behome extends StatefulWidget {
+class BeHome extends StatefulWidget {
   static const String idScreen = "behome";
 
   @override
-  behomeState createState() => behomeState();
+  _behomeState createState() => _behomeState();
 }
 
-class behomeState extends State<behome>
-    with SingleTickerProviderStateMixin {
-
+class _behomeState extends State<BeHome> with SingleTickerProviderStateMixin {
   int selectedItemIndex = 4;
 
   @override
-
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -52,22 +48,24 @@ class behomeState extends State<behome>
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          color: Colors.grey[200]),
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.grey[200],
+                      ),
                       child: TextField(
-                        onTap: (){
-
-                        },
+                        onTap: () {},
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                                color: Colors.grey.withOpacity(0.4)
+                              color: Colors.grey.withOpacity(0.4),
                             ),
                           ),
-                          contentPadding: EdgeInsets.only(top:10,left: 10.0),
+                          contentPadding: EdgeInsets.only(top: 10, left: 10.0),
                           hintText: 'search...',
-                          suffixIcon: Icon(Icons.search,color: Colors.grey.withOpacity(0.4),),
+                          suffixIcon: Icon(
+                            Icons.search,
+                            color: Colors.grey.withOpacity(0.4),
+                          ),
                         ),
                       ),
                     ),
@@ -94,8 +92,11 @@ class behomeState extends State<behome>
                           child: RaisedButton(
                             color: Colors.white,
                             onPressed: () {
-                               Navigator.pushNamedAndRemoveUntil(
-                                  context,pillRememberScreen.idScreen, (route) => false);
+                              Navigator.pushNamedAndRemoveUntil(
+                                context,
+                                PillRememberScreen.idScreen,
+                                (route) => false,
+                              );
                             },
                             child: Text(
                               'Pill Remember',
@@ -148,8 +149,7 @@ class CustomBottomNavigationBar extends StatefulWidget {
   });
 
   @override
-  _CustomBottomNavigationBarState createState() =>
-      _CustomBottomNavigationBarState();
+  _CustomBottomNavigationBarState createState() => _CustomBottomNavigationBarState();
 }
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {

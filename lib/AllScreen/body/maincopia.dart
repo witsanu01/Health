@@ -6,7 +6,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pedometer/pedometer.dart';
 import 'package:decimal/decimal.dart';
 
-
 class MyApp1 extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
@@ -32,31 +31,31 @@ class _MyAppState extends State<MyApp1> {
     setUpPedometer();
   }
 
-
   void setUpPedometer() {
     Pedometer pedometer = new Pedometer();
-    _subscription = pedometer.stepCountStream.listen(_onData,
-        onError: _onError, onDone: _onDone, cancelOnError: true);
+    _subscription = pedometer.stepCountStream.listen(
+      _onData,
+      onError: _onError,
+      onDone: _onDone,
+      cancelOnError: true,
+    );
   }
 
   void _onData(int stepCountValue) async {
-
     setState(() {
       _stepCountValue = "$stepCountValue";
-
     });
 
     var dist = stepCountValue;
     double y = (dist + .0);
 
     setState(() {
-      _numerox =
-          y;
+      _numerox = y;
     });
 
     var long3 = (_numerox);
     long3 = num.parse(y.toStringAsFixed(2));
-    var long4 = (long3/10000);
+    var long4 = (long3 / 10000);
 
     int decimals = 1;
     int fac = pow(10, decimals);
@@ -124,7 +123,7 @@ class _MyAppState extends State<MyApp1> {
           title: const Text('Step Counter app'),
           backgroundColor: Colors.black54,
         ),
-        body: new Container(          
+        body: new Container(
           color: Colors.white24,
           child: ListView(
             padding: EdgeInsets.all(5.0),
@@ -135,8 +134,7 @@ class _MyAppState extends State<MyApp1> {
                 height: 150, //largo tambien por numero height: 300
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      begin: Alignment
-                          .bottomCenter, //cambia la iluminacion del degradado
+                      begin: Alignment.bottomCenter, //cambia la iluminacion del degradado
                       end: Alignment.topCenter,
                       colors: [Color(0xFFA9F5F2), Color(0xFF01DFD7)],
                     ),
@@ -165,10 +163,7 @@ class _MyAppState extends State<MyApp1> {
                         //color: Colors.orange,
                         child: Text(
                           '$_stepCountValue',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20.0,
-                              color: Colors.purpleAccent),
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.purpleAccent),
                         ),
                         // height: 50.0,
                         // width: 50.0,
@@ -179,10 +174,7 @@ class _MyAppState extends State<MyApp1> {
                   //percent: _convert,
                   footer: new Text(
                     "Pasos:  $_stepCountValue",
-                    style: new TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 12.0,
-                        color: Colors.purple),
+                    style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 12.0, color: Colors.purple),
                   ),
                   circularStrokeCap: CircularStrokeCap.round,
                   progressColor: Colors.purpleAccent,
@@ -213,8 +205,7 @@ class _MyAppState extends State<MyApp1> {
                           child: Text(
                             "$_km Km",
                             textAlign: TextAlign.right,
-                            style: new TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 14.0),
+                            style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0),
                           ),
                         ),
                         color: Colors.white54,
@@ -279,10 +270,7 @@ class _MyAppState extends State<MyApp1> {
                           child: Text(
                             "$_km Km",
                             textAlign: TextAlign.right,
-                            style: new TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14.0,
-                                color: Colors.white),
+                            style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0, color: Colors.white),
                           ),
                         ),
                         color: Colors.purple,
@@ -298,10 +286,7 @@ class _MyAppState extends State<MyApp1> {
                           child: Text(
                             "$_calories kCal",
                             textAlign: TextAlign.right,
-                            style: new TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14.0,
-                                color: Colors.white),
+                            style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0, color: Colors.white),
                           ),
                         ),
                         color: Colors.red,
@@ -317,10 +302,7 @@ class _MyAppState extends State<MyApp1> {
                           child: Text(
                             "$_stepCountValue Steps",
                             textAlign: TextAlign.right,
-                            style: new TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14.0,
-                                color: Colors.white),
+                            style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0, color: Colors.white),
                           ),
                         ),
                         color: Colors.black,
@@ -401,13 +383,13 @@ class _MyAppState extends State<MyApp1> {
                 padding: EdgeInsets.only(top: 2.0),
                 width: 200, //ancho
                 height: 100, //l
-                      decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("assets/images/codigoalpha.png"),
-                              fit: BoxFit.fitWidth,
-                              alignment: Alignment.topCenter,
-                            ),
-                          ),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/codigoalpha.png"),
+                    fit: BoxFit.fitWidth,
+                    alignment: Alignment.topCenter,
+                  ),
+                ),
               ),
             ],
           ),

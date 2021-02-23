@@ -5,7 +5,6 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pedometer/pedometer.dart';
 
-
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
@@ -35,23 +34,19 @@ class _MyAppState extends State<MyApp> {
   //inicia codigo pedometer
   void setUpPedometer() {
     Pedometer pedometer = new Pedometer();
-    _subscription = pedometer.stepCountStream.listen(_onData,
-        onError: _onError, onDone: _onDone, cancelOnError: true);
+    _subscription = pedometer.stepCountStream.listen(_onData, onError: _onError, onDone: _onDone, cancelOnError: true);
   }
 
   void _onData(int stepCountValue) async {
-
     setState(() {
       _stepCountValue = "$stepCountValue";
-
     });
 
     var dist = stepCountValue;
     double y = (dist + .0);
 
     setState(() {
-      _numerox =
-          y;
+      _numerox = y;
     });
 
     var long3 = (_numerox);
@@ -132,10 +127,9 @@ class _MyAppState extends State<MyApp> {
               height: 250,
               decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    begin: Alignment
-                        .bottomCenter,
+                    begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
-                    colors: [Color(0xFFA9F5F2), Color(0xFF01DFD7)],
+                    colors: [Colors.red, Colors.black],
                   ),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(27.0),
@@ -165,10 +159,7 @@ class _MyAppState extends State<MyApp> {
                         //color: Colors.orange,
                         child: Text(
                           '$_stepCountValue',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20.0,
-                              color: Colors.purpleAccent),
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.purpleAccent),
                         ),
                         // height: 50.0,
                         // width: 50.0,
@@ -180,10 +171,7 @@ class _MyAppState extends State<MyApp> {
                 //percent: _convert,
                 footer: new Text(
                   "Pasos:  $_stepCountValue",
-                  style: new TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 12.0,
-                      color: Colors.purple),
+                  style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 12.0, color: Colors.purple),
                 ),
                 circularStrokeCap: CircularStrokeCap.round,
                 progressColor: Colors.purpleAccent,
@@ -214,8 +202,7 @@ class _MyAppState extends State<MyApp> {
                         child: Text(
                           "$_km Km",
                           textAlign: TextAlign.right,
-                          style: new TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 14.0),
+                          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0),
                         ),
                       ),
                       color: Colors.white54,
@@ -279,10 +266,7 @@ class _MyAppState extends State<MyApp> {
                         child: Text(
                           "$_km Km",
                           textAlign: TextAlign.right,
-                          style: new TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14.0,
-                              color: Colors.white),
+                          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0, color: Colors.white),
                         ),
                       ),
                       color: Colors.purple,
@@ -298,10 +282,7 @@ class _MyAppState extends State<MyApp> {
                         child: Text(
                           "$_calories kCal",
                           textAlign: TextAlign.right,
-                          style: new TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14.0,
-                              color: Colors.white),
+                          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0, color: Colors.white),
                         ),
                       ),
                       color: Colors.red,
@@ -317,10 +298,7 @@ class _MyAppState extends State<MyApp> {
                         child: Text(
                           "$_stepCountValue Steps",
                           textAlign: TextAlign.right,
-                          style: new TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14.0,
-                              color: Colors.white),
+                          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0, color: Colors.white),
                         ),
                       ),
                       color: Colors.black,

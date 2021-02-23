@@ -20,15 +20,15 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
-
-void main()async
-{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp ());
+  runApp(MyApp());
 }
+
 DatabaseReference usersRef = FirebaseDatabase.instance.reference().child("users");
-class MyApp  extends StatelessWidget{
+
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -37,36 +37,29 @@ class MyApp  extends StatelessWidget{
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute:HomeScreen.idScreen,
+      initialRoute: HomeScreen.idScreen,
       routes: {
-        mainScreen.idScreen:(context)=>mainScreen(),
-        LoginScreen.idScreen:(context)=>LoginScreen(),
-        RegisterScreen.idScreen:(context)=>RegisterScreen(),
-        QRcode.idScreen:(context)=>QRcode(),
-        firstaid.idScreen:(context)=>firstaid(),
-        pillRememberScreen.idScreen:(context)=>pillRememberScreen(),
-        NotesPage.idScreen:(context)=>NotesPage(),
-        EmergencyScreen.idScreen:(context)=>EmergencyScreen(),
-        Googlemap.idScreen:(context)=>Googlemap(),
-        ChatScreen.idScreen:(context)=>ChatScreen(),
-        openApp.idScreen:(context)=> openApp(),
-        Dashboard.idScreen:(context) => Dashboard(),
-        behome.idScreen:(context) =>behome(),
-        PillRemender1.idScreen:(context)=> PillRemender1(),
-        foodScreen.idScreen:(context)=>foodScreen(),
-        NewfoodScreen.idScreen:(context)=>NewfoodScreen(),
-        foods.idScreen:(context)=>foods(),
-        HomeScreen.idScreen:(context)=>HomeScreen(),
-
+        mainScreen.idScreen: (context) => mainScreen(),
+        LoginScreen.idScreen: (context) => LoginScreen(),
+        RegisterScreen.idScreen: (context) => RegisterScreen(),
+        QRcode.idScreen: (context) => QRcode(),
+        firstaid.idScreen: (context) => firstaid(),
+        PillRememberScreen.idScreen: (context) => PillRememberScreen(),
+        NotesPage.idScreen: (context) => NotesPage(),
+        EmergencyScreen.idScreen: (context) => EmergencyScreen(),
+        Googlemap.idScreen: (context) => Googlemap(),
+        ChatScreen.idScreen: (context) => ChatScreen(),
+        openApp.idScreen: (context) => openApp(),
+        Dashboard.idScreen: (context) => Dashboard(),
+        BeHome.idScreen: (context) => BeHome(),
+        PillRemender1.idScreen: (context) => PillRemender1(),
+        FoodScreen.idScreen: (context) => FoodScreen(),
+        NewfoodScreen.idScreen: (context) => NewfoodScreen(),
+        foods.idScreen: (context) => foods(),
+        HomeScreen.idScreen: (context) => HomeScreen(),
       },
       debugShowCheckedModeBanner: false,
-      home:NotesPage(),
+      home: NotesPage(),
     );
   }
 }
-
-
-
-
-
-

@@ -1,4 +1,3 @@
-
 import 'package:Health/AllScreen/pill%20remember/animations/fade_animation.dart';
 import 'package:Health/AllScreen/pill%20remember/enums/icon_enum.dart';
 import 'package:Health/AllScreen/pill%20remember/models/Medicine.dart';
@@ -11,13 +10,13 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-class pillRememberScreen extends StatefulWidget {
+class PillRememberScreen extends StatefulWidget {
   static const String idScreen = "pillRememberScreen";
   @override
-  _pillRememberScreenState createState() => _pillRememberScreenState();
+  _PillRememberScreenState createState() => _PillRememberScreenState();
 }
 
-class _pillRememberScreenState extends State<pillRememberScreen> {
+class _PillRememberScreenState extends State<PillRememberScreen> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -28,7 +27,7 @@ class _pillRememberScreenState extends State<pillRememberScreen> {
         }
       },
       child: Padding(
-        padding: const EdgeInsets.only(right: 30.0,left: 30.0),
+        padding: const EdgeInsets.only(right: 30.0, left: 30.0),
         child: MaterialApp(
           title: 'Medicine Reminder ',
           debugShowCheckedModeBanner: false,
@@ -40,8 +39,6 @@ class _pillRememberScreenState extends State<pillRememberScreen> {
         ),
       ),
     );
-
-
   }
 }
 
@@ -80,9 +77,7 @@ class _MyMedicineReminder extends State<MyMedicineRemainder> {
                     builder: (context, child, model) {
                       return Stack(children: <Widget>[
                         buildMedicinesView(model),
-                        (model.getCurrentIconState() == DeleteIconState.hide)
-                            ? Container()
-                            : DeleteIcon()
+                        (model.getCurrentIconState() == DeleteIconState.hide) ? Container() : DeleteIcon()
                       ]);
                     },
                   ),
@@ -113,8 +108,7 @@ class _MyMedicineReminder extends State<MyMedicineRemainder> {
   void buildBottomSheet(double height, MedicineModel model) async {
     var medicineId = await showModalBottomSheet(
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(45), topRight: Radius.circular(45))),
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(45), topRight: Radius.circular(45))),
         context: context,
         isScrollControlled: true,
         builder: (context) {
