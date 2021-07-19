@@ -4,22 +4,20 @@ import 'package:Health/AllScreen/MainDrawer.dart';
 import 'package:Health/AllScreen/News/Screens/HomeScreen.dart';
 import 'package:Health/AllScreen/Note/Notes.dart';
 import 'package:Health/AllScreen/QRcode/QRcode.dart';
-import 'package:Health/AllScreen/bepill/PillRemender.dart';
 import 'package:Health/AllScreen/chatAl/chatScreen.dart';
-import 'package:Health/AllScreen/foods/foodhealthy.dart';
 import 'package:Health/AllScreen/fristaid/firstaid.dart';
 import 'package:Health/AllScreen/pill%20remember/mainScreenpill.dart';
 import 'package:Health/foodScreen/Newsfood.dart';
 import 'package:flutter/material.dart';
 
-class mainScreen extends StatefulWidget {
+class MainScreen extends StatefulWidget {
   static const String idScreen = "mainScreen";
 
   @override
   mainScreenState createState() => mainScreenState();
 }
 
-class mainScreenState extends State<mainScreen>
+class mainScreenState extends State<MainScreen>
     with SingleTickerProviderStateMixin {
   int selectedItemIndex = 4;
 
@@ -123,37 +121,13 @@ class mainScreenState extends State<mainScreen>
                     elevation: 4,
                     child: Column(
                       children: <Widget>[
-                        Image.asset("assets/clock.png", width: 100),
-                        Container(
-                          child: RaisedButton(
-                            color: Colors.white,
-                            onPressed: () {
-                              Navigator.pushNamedAndRemoveUntil(
-                                  context,PillRemender1.idScreen, (route) => false);
-                            },
-                            child: Text(
-                              'Pill Remember',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14.0,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Card(
-                    elevation: 4,
-                    child: Column(
-                      children: <Widget>[
                         Image.asset("assets/aid1.png", width: 100),
                         Container(
                           child: RaisedButton(
                             color: Colors.white,
                             onPressed: () {
                               Navigator.pushNamedAndRemoveUntil(
-                                  context, firstaid.idScreen, (route) => false);
+                                  context, Firstaid.idScreen, (route) => false);
                             },
                             child: Text(
                               'First aid',
@@ -205,30 +179,6 @@ class mainScreenState extends State<mainScreen>
                             },
                             child: Text(
                               'cal foods',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14.0,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Card(
-                    elevation: 4,
-                    child: Column(
-                      children: <Widget>[
-                        Image.asset("assets/eat.png", width: 100),
-                        Container(
-                          child: RaisedButton(
-                            color: Colors.white,
-                            onPressed: () {
-                              Navigator.pushNamedAndRemoveUntil(context,
-                                 foods.idScreen, (route) => false);
-                            },
-                            child: Text(
-                              'foods Healthy',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 14.0,
@@ -301,7 +251,7 @@ class mainScreenState extends State<mainScreen>
                                   EmergencyScreen.idScreen, (route) => false);
                             },
                             child: Text(
-                              'Emercency',
+                              'Emergency',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 14.0,

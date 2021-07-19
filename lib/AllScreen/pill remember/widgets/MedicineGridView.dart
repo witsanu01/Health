@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'MedicineCard.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-
 class MedicineGridView extends StatelessWidget {
   final List<MedicinesTableData> list;
   MedicineGridView(this.list);

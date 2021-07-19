@@ -38,7 +38,7 @@ class _EmergencyScreenState extends State<EmergencyScreen> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,mainScreen.idScreen, (route) => false);
+                  context,MainScreen.idScreen, (route) => false);
             },
           )
         ],

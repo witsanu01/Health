@@ -7,7 +7,7 @@ class Generate extends StatefulWidget {
 }
 
 class _GenerateState extends State<Generate> {
-  String qrData = "www.google.com";
+  String qrData = "http://www.hosting1.cmru.ac.th/61143231/Personalinformation.php?fbclid=IwAR1Bre7bRBuI8bmv65MQptUKC6N7xB8V09gtV-_gowGq0AXDhNbSAtdNuiY";
 
   @override
   Widget build(BuildContext context) {

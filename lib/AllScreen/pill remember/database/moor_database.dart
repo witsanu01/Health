@@ -2,7 +2,6 @@ import 'package:moor_flutter/moor_flutter.dart';
 part 'moor_database.g.dart';
 
 class MedicinesTable extends Table {
-  // autoincrement sets this to the primary key
   IntColumn get id => integer().autoIncrement()();
   TextColumn get name => text().withLength(min: 5, max: 50)();
   TextColumn get image => text()();

@@ -29,7 +29,7 @@ class _QRcodeState extends State<QRcode> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,mainScreen.idScreen, (route) => false);
+                  context,MainScreen.idScreen, (route) => false);
             },
           )
         ],

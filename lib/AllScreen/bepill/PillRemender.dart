@@ -1,12 +1,13 @@
 import 'package:Health/AllScreen/mainScreen.dart';
-import 'package:Health/beHome.dart';
 import 'package:flutter/material.dart';
 
 class PillRemender1 extends StatefulWidget {
   static const String idScreen = "PillRemender";
   @override
   _PillRemenderState createState() => _PillRemenderState();
+
 }
+
 
 class _PillRemenderState extends State<PillRemender1> {
 
@@ -29,7 +30,7 @@ class _PillRemenderState extends State<PillRemender1> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,mainScreen.idScreen, (route) => false);
+                  context,MainScreen.idScreen, (route) => false);
             },
           )
         ],

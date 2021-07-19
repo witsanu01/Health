@@ -1,6 +1,6 @@
 import 'package:Health/AllScreen/login/RegisterScreen.dart';
 import 'package:Health/AllScreen/login/loginScreen.dart';
-import 'package:Health/AllScreen/mainScreen.dart';
+import 'package:Health/AllScreen/MainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -103,7 +103,7 @@ class MainDrawer extends StatelessWidget {
         ),
         ListTile(
           onTap: () {
-            Navigator.pushNamedAndRemoveUntil(context, mainScreen.idScreen, (route) => false);
+            Navigator.pushNamedAndRemoveUntil(context, MainScreen.idScreen, (route) => false);
           },
           leading: Icon(
             Icons.logout,

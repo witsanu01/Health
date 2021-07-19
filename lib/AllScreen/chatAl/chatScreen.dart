@@ -52,7 +52,7 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context, mainScreen.idScreen, (route) => false);
+                  context, MainScreen.idScreen, (route) => false);
             },
           )
         ],

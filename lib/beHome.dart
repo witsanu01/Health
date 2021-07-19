@@ -6,10 +6,10 @@ class BeHome extends StatefulWidget {
   static const String idScreen = "behome";
 
   @override
-  _behomeState createState() => _behomeState();
+  _BehomeState createState() => _BehomeState();
 }
 
-class _behomeState extends State<BeHome> with SingleTickerProviderStateMixin {
+class _BehomeState extends State<BeHome> with SingleTickerProviderStateMixin {
   int selectedItemIndex = 4;
 
   @override

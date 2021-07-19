@@ -1,6 +1,5 @@
 import 'package:Health/AllScreen/pill%20remember/animations/fade_animation.dart';
 import 'package:flutter/material.dart';
-
 import 'package:scoped_model/scoped_model.dart';
 import '../database/moor_database.dart';
 import '../models/Medicine.dart';

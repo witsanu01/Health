@@ -1,12 +1,7 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
+
 
 part of 'moor_database.dart';
 
-// **************************************************************************
-// MoorGenerator
-// **************************************************************************
-
-// ignore_for_file: unnecessary_brace_in_string_interps, unnecessary_this
 class MedicinesTableData extends DataClass
     implements Insertable<MedicinesTableData> {
   final int id;

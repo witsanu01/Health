@@ -15,7 +15,7 @@ class MyAppBar extends StatelessWidget {
     return Container(
       color: greenColor,
       width: double.infinity,
-      padding: EdgeInsets.all(25),
+      padding: EdgeInsets.all(15),
       child: Column(
         children: <Widget>[
           SizedBox(

@@ -4,7 +4,6 @@ import 'dart:async';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pedometer/pedometer.dart';
-import 'package:decimal/decimal.dart';
 
 class MyApp1 extends StatefulWidget {
   @override
@@ -136,7 +135,7 @@ class _MyAppState extends State<MyApp1> {
                     gradient: LinearGradient(
                       begin: Alignment.bottomCenter, //cambia la iluminacion del degradado
                       end: Alignment.topCenter,
-                      colors: [Color(0xFFA9F5F2), Color(0xFF01DFD7)],
+                      // colors: [Color(0xFFA9F5F2), Color(0xFF01DFD7)],
                     ),
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(27.0),

@@ -1,4 +1,4 @@
-import 'package:Health/AllScreen/login/GoogleSignIn.dart';
+
 import 'package:Health/AllScreen/login/RegisterScreen.dart';
 import 'package:Health/AllScreen/mainScreen.dart';
 import 'package:Health/AllWidget/processDialog.dart';
@@ -113,9 +113,9 @@ class _LoginScreenState extends State<LoginScreen> {
               SignInButton(
                   buttonType: ButtonType.google,
                   onPressed: () {
-                  final provider =
-                  Provider.of<GoogleSignInProvider>(context, listen: false);
-                  provider.login();
+                  // final provider =
+                  // Provider.of<GoogleSignInProvider>(context, listen: false);
+                  // provider.login();
                   }),
               SignInButton(
                   buttonType: ButtonType.facebook,
@@ -165,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
       usersRef.child(firebaseUser.uid).once().then((DataSnapshot snap) {
         if (snap.value != null) {
           Navigator.pushNamedAndRemoveUntil(
-              context, mainScreen.idScreen, (route) => false);
+              context, MainScreen.idScreen, (route) => false);
           displayToastMessage("You are Logged-in now", context);
         } else {
           Navigator.pop(context);

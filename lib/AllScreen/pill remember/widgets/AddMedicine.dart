@@ -1,8 +1,6 @@
 import 'package:Health/AllScreen/pill%20remember/database/moor_database.dart';
 import 'package:Health/AllScreen/pill%20remember/notifications/NotificationManager.dart';
-import 'package:flutter/material.dart';
-
-
+import 'package:flutter/material.dart'; 
 class AddMedicine extends StatefulWidget {
   final double height;
   final AppDatabase _database;

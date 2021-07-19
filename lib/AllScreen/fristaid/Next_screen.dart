@@ -14,14 +14,12 @@ class _NextScreenState extends State<NextScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     controller.addListener(onScroll);
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     controller.dispose();
     super.dispose();
   }
@@ -51,7 +49,7 @@ class _NextScreenState extends State<NextScreen> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,mainScreen.idScreen, (route) => false);
+                  context,MainScreen.idScreen, (route) => false);
             },
           )
         ],

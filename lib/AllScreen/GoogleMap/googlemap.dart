@@ -49,7 +49,7 @@ class _GooglemapState extends State<Googlemap> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,mainScreen.idScreen, (route) => false);
+                  context,MainScreen.idScreen, (route) => false);
             },
           )
         ],

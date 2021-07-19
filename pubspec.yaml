@@ -58,12 +58,12 @@ dependencies:
   percent_indicator: ^1.0.14
   firebase_auth: ^0.18.1+2
   firebase_database: ^4.1.1
-  flutter_facebook_login: ^3.0.0
   firebase_storage:
   shared_preferences:
   grouped_list: ^3.7.1
-  google_sign_in: ^4.5.9
   json_serializable: ^3.2.3
+
+   
 
 
     # plurals and gender  s, date/number formatting and parsing, and bidirectional text.

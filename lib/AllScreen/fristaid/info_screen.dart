@@ -2,7 +2,7 @@
 import 'package:Health/AllScreen/fristaid/constants.dart';
 import 'package:Health/AllScreen/fristaid/my_header.dart';
 import 'package:Health/AllScreen/mainScreen.dart';
-import 'package:Health/beHome.dart';
+import 'package:Health/BeHome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -54,7 +54,7 @@ class _InfoScreenState extends State<InfoScreen> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,mainScreen.idScreen, (route) => false);
+                  context,MainScreen.idScreen, (route) => false);
             },
           )
         ],

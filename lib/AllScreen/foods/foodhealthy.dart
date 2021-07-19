@@ -1,12 +1,12 @@
 import 'package:Health/AllScreen/mainScreen.dart';
 import 'package:flutter/material.dart';
-class foods extends StatefulWidget {
+class Foods extends StatefulWidget {
   static const String idScreen = "foods";
   @override
   _foodsState createState() => _foodsState();
 }
 
-class _foodsState extends State<foods> {
+class _foodsState extends State<Foods> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +14,7 @@ class _foodsState extends State<foods> {
         backgroundColor: Colors.blue,
         elevation: 0.0,
         title: Text(
-          'foods',
+          'Medicine',
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
@@ -26,11 +26,12 @@ class _foodsState extends State<foods> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,mainScreen.idScreen, (route) => false);
+                  context,MainScreen.idScreen, (route) => false);
             },
           )
         ],
       ),
+    
     );
   }
 }

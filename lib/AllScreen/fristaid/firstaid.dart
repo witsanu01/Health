@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 
-class firstaid extends StatefulWidget {
+class Firstaid extends StatefulWidget {
   @override
   _firstaidState createState() => _firstaidState();
-  static const String idScreen = "firstaid";
+  static const String idScreen = "Firstaid";
 }
 
-class _firstaidState extends State<firstaid> {
+class _firstaidState extends State<Firstaid> {
   final controller = ScrollController();
   double offset = 0;
 
@@ -56,7 +56,7 @@ class _firstaidState extends State<firstaid> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,mainScreen.idScreen, (route) => false);
+                  context,MainScreen.idScreen, (route) => false);
             },
           )
         ],
@@ -126,7 +126,7 @@ class _firstaidState extends State<firstaid> {
                               style: kTitleTextstyle,
                             ),
                             TextSpan(
-                              text: "Newest update March 28",
+                              text: "Newest update March 3/3/2021",
                               style: TextStyle(
                                 color: kTextLightColor,
                               ),
@@ -163,17 +163,17 @@ class _firstaidState extends State<firstaid> {
                       children: <Widget>[
                         Counter(
                           color: kInfectedColor,
-                          number: 22058,
+                          number: 28420,
                           title: "Infected",
                         ),
                         Counter(
                           color: kDeathColor,
-                          number: 79,
+                          number: 84,
                           title: "Deaths",
                         ),
                         Counter(
                           color: kRecovercolor,
-                          number: 14798,
+                          number: 26072,
                           title: "Recovered",
                         ),
                       ],

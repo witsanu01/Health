@@ -1,6 +1,5 @@
 
 import 'package:Health/AllScreen/mainScreen.dart';
-import 'package:Health/beHome.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +45,7 @@ class _NotesPageState extends State<NotesPage> {
             ),
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context,mainScreen.idScreen, (route) => false);
+                  context,MainScreen.idScreen, (route) => false);
             },
           )
         ],

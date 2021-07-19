@@ -42,7 +42,7 @@ class _FoodScreenState extends State<FoodScreen> {
               color: Colors.white,
             ),
             onPressed: () {
-              Navigator.pushNamedAndRemoveUntil(context, mainScreen.idScreen, (route) => false);
+              Navigator.pushNamedAndRemoveUntil(context, MainScreen.idScreen, (route) => false);
             },
           )
         ],
@@ -70,11 +70,11 @@ class _FoodScreenState extends State<FoodScreen> {
               animation: true,
               percent: 0.7,
               center: new Text(
-                "70.0%",
+                "30 min",
                 style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
               ),
               footer: new Text(
-                "Sales this week",
+                "walk ",
                 style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 17.0),
               ),
               circularStrokeCap: CircularStrokeCap.round,
@@ -86,7 +86,11 @@ class _FoodScreenState extends State<FoodScreen> {
                 radius: 100.0,
                 lineWidth: 10.0,
                 percent: 1.0,
-                center: new Text("100%"),
+                center: new Text("30 min"),
+                 footer: new Text(
+                "Dance",
+                style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 17.0),
+              ),
                 progressColor: Colors.green,
               ),
             ),
@@ -101,7 +105,7 @@ class _FoodScreenState extends State<FoodScreen> {
                       lineHeight: 14.0,
                       percent: 0.5,
                       center: Text(
-                        "50.0%",
+                        "100%",
                         style: new TextStyle(fontSize: 12.0),
                       ),
                       trailing: Icon(Icons.mood),
@@ -117,38 +121,72 @@ class _FoodScreenState extends State<FoodScreen> {
                       animation: true,
                       animationDuration: 1000,
                       lineHeight: 20.0,
-                      leading: new Text("left content"),
-                      trailing: new Text("right content"),
+                      leading: new Text("หมู่ที่ 1 เนื้อ ไข่ นม"),
+                      trailing: new Text("เนื้อปลา"),
                       percent: 0.2,
-                      center: Text("20.0%"),
+                      center: Text("150cal"),
+                      linearStrokeCap: LinearStrokeCap.butt,
+                      progressColor: Colors.blue,
+                    ),
+                  ),
+                     Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: new LinearPercentIndicator(
+                      width: 170.0,
+                      animation: true,
+                      animationDuration: 1000,
+                      lineHeight: 20.0,
+                      leading: new Text("หมู่ที่ 2 ข้าว น้ำตาล"),
+                      trailing: new Text("ข้าวเจ้า"),
+                      percent: 0.2,
+                      center: Text("60 cal"),
+                      linearStrokeCap: LinearStrokeCap.butt,
+                      progressColor: Colors.blueGrey,
+                    ),
+                  ),
+                   Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: new LinearPercentIndicator(
+                      width: 170.0,
+                      animation: true,
+                      animationDuration: 1000,
+                      lineHeight: 20.0,
+                      leading: new Text("หมู่ที่ 3 ผัก"),
+                      trailing: new Text("ผักกาด ผักบุ้ง"),
+                      percent: 0.2,
+                      center: Text("20 cal"),
+                      linearStrokeCap: LinearStrokeCap.butt,
+                      progressColor: Colors.greenAccent,
+                    ),
+                  ),
+                     Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: new LinearPercentIndicator(
+                      width: 170.0,
+                      animation: true,
+                      animationDuration: 1000,
+                      lineHeight: 20.0,
+                      leading: new Text("หมู่ที่ 4 ผลไม้"),
+                      trailing: new Text("ส้ม แอปเปิ้ล กล้วย"),
+                      percent: 0.2,
+                      center: Text("30 cal"),
                       linearStrokeCap: LinearStrokeCap.butt,
                       progressColor: Colors.red,
                     ),
                   ),
-                  Padding(
+                   Padding(
                     padding: EdgeInsets.all(15.0),
                     child: new LinearPercentIndicator(
-                      width: MediaQuery.of(context).size.width - 50,
+                      width: 170.0,
                       animation: true,
+                      animationDuration: 1000,
                       lineHeight: 20.0,
-                      animationDuration: 2000,
-                      percent: 0.9,
-                      center: Text("90.0%"),
-                      linearStrokeCap: LinearStrokeCap.roundAll,
-                      progressColor: Colors.greenAccent,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(15.0),
-                    child: new LinearPercentIndicator(
-                      width: MediaQuery.of(context).size.width - 50,
-                      animation: true,
-                      lineHeight: 20.0,
-                      animationDuration: 2500,
-                      percent: 0.8,
-                      center: Text("80.0%"),
-                      linearStrokeCap: LinearStrokeCap.roundAll,
-                      progressColor: Colors.green,
+                      leading: new Text("หมู่ที่ 5 ไขมัน"),
+                      trailing: new Text("น้ำมันมะพร้าว"),
+                      percent: 0.2,
+                      center: Text("5%"),
+                      linearStrokeCap: LinearStrokeCap.butt,
+                      progressColor: Colors.yellow,
                     ),
                   ),
                 ],
@@ -161,7 +199,9 @@ class _FoodScreenState extends State<FoodScreen> {
               width: MediaQuery.of(context).size.width,
               child: RaisedButton(
                 color: Colors.greenAccent,
-                onPressed: () {},
+                onPressed: () {
+                  
+                },
                 child: Text(
                   'send foods'.toUpperCase(),
                   style: TextStyle(
